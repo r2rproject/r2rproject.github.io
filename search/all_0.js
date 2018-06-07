@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['actpos',['actPos',['../structcontrol__data__t.html#a892c45389a98ba3bfc68972f71eaaf12',1,'control_data_t']]],
+  ['actpos',['actPos',['../structmotor__control__data.html#a15da9ec28fdeb23649bdf9755b82f229',1,'motor_control_data']]],
   ['adc_2eh',['Adc.h',['../_adc_8h.html',1,'']]],
   ['adccurrentread',['adcCurrentRead',['../_adc_8h.html#a10a122657b8f802a6931e2bd8732289e',1,'Adc.c']]],
   ['adcinit',['adcInit',['../_adc_8h.html#afd645b17cf0581bcaa22c56011c775e4',1,'Adc.c']]],
