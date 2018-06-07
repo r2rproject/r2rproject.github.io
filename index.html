@@ -183,7 +183,17 @@ UART communication</h2>
 Writing Menu Commands</h2>
 <p>The MATLAB menu can also be modified to fit a custom control law. The MATLAB code is set up in a tree format where each entry is a node that includes information about its parent and children. The only point to edit is * where the details of the node has to be specified</p>
 <p>There are two types of nodes: a data node, which accepts input from the user and immediately transitions to its child node, and a navigational node, which accepts input from the user and checks its child nodes for the matching option. The navigational node does simple error checking, but the data node does not because of the wide variety of data types that might be possible. Instead, a statement of the expected data type is presented and the user is expected to conform to this data type when interacting with a data node.</p>
-<p>On the firmware side, additional case statements are added that correspond to the added nodes to process the incoming data. </p>
+<p>On the firmware side, additional case statements are added that correspond to the added nodes to process the incoming data.</p>
+<p>The user has to add in two functions, one which saves the input to the state of the program, and the other which processes the input. The only function that needs to be edited is the <code>hierarchicalMenu.m</code>, which is found in: BackupAndUI &gt; R2R_interfaces &gt; menu_library</p>
+<div class="image">
+<img src="parent.JPG" alt="parent.JPG"/>
+<div class="caption">
+Adding a parent node</div></div>
+<p> Once the top level menu option has been created, a menu function to process the data must also be created.</p>
+<div class="image">
+<img src="child.JPG" alt="child.JPG"/>
+<div class="caption">
+Adding a child node</div></div>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
