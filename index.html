@@ -126,15 +126,15 @@ Setup Completed</div></div>
 Programming</div></div>
 <h1><a class="anchor" id="writingcustomcode"></a>
 Writing Custom Code</h1>
-<p>Two timers (Timer 6 and Timer 7) are set up in the code and can execute at user-set frequencies in <code><a class="el" href="r2r_8c.html" title="This file contains the main function that calls all other initialization functions. ">r2r.c</a></code>. The intention is that the user will either write code in <a class="el" href="r2r_8c.html" title="This file contains the main function that calls all other initialization functions. ">r2r.c</a> or create a header and source file. Here, an simple example will be set out to compute simple position control over motor 1 in <a class="el" href="r2r_8c.html" title="This file contains the main function that calls all other initialization functions. ">r2r.c</a> at 5kHz.</p>
+<p>Two timers (Timer 6 and Timer 7) are set up in the code and can execute at user-set frequencies in <code><a class="el" href="r2r_8c.html" title="Main R2R library. ">r2r.c</a></code>. The intention is that the user will either write code in <a class="el" href="r2r_8c.html" title="Main R2R library. ">r2r.c</a> or create a header and source file. Here, an simple example will be set out to compute simple position control over motor 1 in <a class="el" href="r2r_8c.html" title="Main R2R library. ">r2r.c</a> at 5kHz.</p>
 <h2><a class="anchor" id="writinginterrupts"></a>
 Writing Interrupts</h2>
 <p>In Code Composer Studio, interrupts follow a general format. There is the interrupt initialization, the interrupt function itself, and a declaration of the interrupt function in the interrupt vector table in <code>tm4c1294ncpdt_startup_ccs.c</code>.</p>
-<p>In this example the timer interrupt has already been declared under <code>customTimersInit()</code> and the corresponding timer functions have been declared in <code>tm4c1294ncpdt_startup_ccs.c</code>.</p>
-<p>In <code><a class="el" href="r2r_8c.html" title="This file contains the main function that calls all other initialization functions. ">r2r.c</a></code>, update frequency: </p><pre class="fragment">    #define TIMER_6_FREQUENCY 5000
-</pre><p>Add global variables for the PID controller in <code><a class="el" href="r2r_8c.html" title="This file contains the main function that calls all other initialization functions. ">r2r.c</a></code> </p><pre class="fragment">int int_error = 0;
+<p>In this example the timer interrupt has already been declared under <code><a class="el" href="r2r_8h.html#a77af04bd0735a3d7eb04200c61fc7812" title="Initializes custom timers. ">customTimersInit()</a></code> and the corresponding timer functions have been declared in <code>tm4c1294ncpdt_startup_ccs.c</code>.</p>
+<p>In <code><a class="el" href="r2r_8c.html" title="Main R2R library. ">r2r.c</a></code>, update frequency: </p><pre class="fragment">    #define TIMER_6_FREQUENCY 5000
+</pre><p>Add global variables for the PID controller in <code><a class="el" href="r2r_8c.html" title="Main R2R library. ">r2r.c</a></code> </p><pre class="fragment">int int_error = 0;
 int prev_error = 0;
-</pre><p>Under <code><a class="el" href="r2r_8c.html#a57b21594b75d4b2a140a1f9bbb1465e8" title="Custom timer 6. ">TIMER6IntHandler()</a></code> in <code><a class="el" href="r2r_8c.html" title="This file contains the main function that calls all other initialization functions. ">r2r.c</a></code>: </p><pre class="fragment">void TIMER6IntHandler(){
+</pre><p>Under <code><a class="el" href="r2r_8h.html#a57b21594b75d4b2a140a1f9bbb1465e8" title="Custom timer 6. ">TIMER6IntHandler()</a></code> in <code><a class="el" href="r2r_8c.html" title="Main R2R library. ">r2r.c</a></code>: </p><pre class="fragment">void TIMER6IntHandler(){
     float kp = 0.5;
     float ki = 1;
     float kd = 0;
@@ -164,8 +164,8 @@ UART communication</h2>
 
     }   
 }
-</pre><p>Add a global variable in <code><a class="el" href="r2r_8c.html" title="This file contains the main function that calls all other initialization functions. ">r2r.c</a></code> to refer to the setAngle variable we just created in main.c: </p><pre class="fragment">    extern int setAngle;
-</pre><p>Now we have to modify the code in the <code><a class="el" href="r2r_8c.html#a57b21594b75d4b2a140a1f9bbb1465e8" title="Custom timer 6. ">TIMER6IntHandler()</a></code> to refer to this variable: </p><pre class="fragment">void TIMER6IntHandler(){
+</pre><p>Add a global variable in <code><a class="el" href="r2r_8c.html" title="Main R2R library. ">r2r.c</a></code> to refer to the setAngle variable we just created in main.c: </p><pre class="fragment">    extern int setAngle;
+</pre><p>Now we have to modify the code in the <code><a class="el" href="r2r_8h.html#a57b21594b75d4b2a140a1f9bbb1465e8" title="Custom timer 6. ">TIMER6IntHandler()</a></code> to refer to this variable: </p><pre class="fragment">void TIMER6IntHandler(){
     float kp = 0.5;
     float ki = 1;
     float kd = 0;

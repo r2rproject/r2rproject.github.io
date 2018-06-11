@@ -1,18 +1,14 @@
 var searchData=
 [
-  ['r2rdefaultinit',['r2rDefaultInit',['../r2r_8c.html#af06127bca89306e7f9af0ea36f162ca0',1,'r2rDefaultInit(void):&#160;r2r.c'],['../r2r_8h.html#af06127bca89306e7f9af0ea36f162ca0',1,'r2rDefaultInit(void):&#160;r2r.c']]],
-  ['readmotor1angle',['readMotor1Angle',['../_encoder_8h.html#a3158f6a637c9f6e10084501a81431581',1,'Encoder.h']]],
-  ['readmotor2angle',['readMotor2Angle',['../_encoder_8h.html#acf5c46f542d35b78a92a1cefac802888',1,'Encoder.h']]],
-  ['readmotorangle',['readMotorAngle',['../_encoder_8h.html#a1fce0320ba0ca0fe37d3b391a47adef0',1,'Encoder.c']]],
-  ['readmotoranglerelative',['readMotorAngleRelative',['../_encoder_8h.html#a4cc507f6297a7e84cdfb4cec6e5d7749',1,'Encoder.c']]],
-  ['readmotorcounts',['readMotorCounts',['../_encoder_8h.html#a1006888f548e8061d0e40f2a10924804',1,'Encoder.c']]],
-  ['readmotorrad',['readMotorRad',['../_encoder_8h.html#a2a54dab75f7a407ae90b1b2c931c0147',1,'Encoder.c']]],
-  ['readmotorradrelative',['readMotorRadRelative',['../_encoder_8h.html#ab294e6902489fe3002becb309a24be1c',1,'Encoder.c']]],
-  ['readmotorraw',['readMotorRaw',['../_encoder_8h.html#a682581003a8423d40a2bb2dc462877da',1,'Encoder.c']]],
-  ['readmotorrawrelative',['readMotorRawRelative',['../_encoder_8h.html#a772612423c09160fb30903910645dd71',1,'Encoder.c']]],
-  ['readmotorspeed',['readMotorSpeed',['../_encoder_8h.html#acd3dc7f7a6dc84b5dba607f76092acee',1,'Encoder.c']]],
-  ['reset_5fcontroller_5ferror',['reset_controller_error',['../_control_8h.html#adf80f17bfeea7e84613a2fb9142dfbc4',1,'Control.c']]],
-  ['reset_5fcurrent_5ferror',['reset_current_error',['../_current_control_8h.html#a7158c18c7941b14c7eac79a8c4f6692e',1,'CurrentControl.c']]],
-  ['reset_5fpos',['reset_pos',['../_control_8h.html#a68b7b6c3193b76e37c547f3448c6fcbb',1,'Control.h']]],
-  ['resetcontrollererror',['resetControllerError',['../_position_control_8h.html#a95e5f03d55fba3d858adbcea6afa9315',1,'PositionControl.c']]]
+  ['send_5fdata',['send_data',['../_utilities_8c.html#aa8061654c0af0c3c3fac9e63ed7eaed6',1,'send_data(void):&#160;Utilities.c'],['../_utilities_8h.html#aa8061654c0af0c3c3fac9e63ed7eaed6',1,'send_data(void):&#160;Utilities.c']]],
+  ['set_5fcurrent_5fgains',['set_current_gains',['../_current_control_8c.html#afdcd89e75250a253db7555d550f2b7ad',1,'set_current_gains(void):&#160;CurrentControl.c'],['../_current_control_8h.html#afdcd89e75250a253db7555d550f2b7ad',1,'set_current_gains(void):&#160;CurrentControl.c']]],
+  ['set_5fdesired_5fangle',['set_desired_angle',['../_position_control_8c.html#a1849f501c3cb9e99ef17c65881960289',1,'set_desired_angle(int angle, int motor):&#160;PositionControl.c'],['../_position_control_8h.html#a1849f501c3cb9e99ef17c65881960289',1,'set_desired_angle(int angle, int motor):&#160;PositionControl.c']]],
+  ['set_5fposition_5fgains',['set_position_gains',['../_position_control_8c.html#aab0c2966059686b7288fceaa8b72d950',1,'set_position_gains(void):&#160;PositionControl.c'],['../_position_control_8h.html#aab0c2966059686b7288fceaa8b72d950',1,'set_position_gains(void):&#160;PositionControl.c']]],
+  ['setadcmux',['setADCMux',['../_current_control_8c.html#ab07c8a54a14148ee47eef30ea3baa661',1,'setADCMux(int motor, int number):&#160;CurrentControl.c'],['../_current_control_8h.html#ab07c8a54a14148ee47eef30ea3baa661',1,'setADCMux(int motor, int number):&#160;CurrentControl.c']]],
+  ['setcurrent',['setCurrent',['../_current_control_8c.html#a991b6533f7e203f97b3a2da6cac50476',1,'setCurrent(int motor, int u):&#160;CurrentControl.c'],['../_current_control_8h.html#a991b6533f7e203f97b3a2da6cac50476',1,'setCurrent(int motor, int u):&#160;CurrentControl.c']]],
+  ['setdecogging',['setDecogging',['../_position_control_8c.html#aeca5028b3ba9d68e9a9ccccae98396cd',1,'setDecogging(void):&#160;PositionControl.c'],['../_position_control_8h.html#aeca5028b3ba9d68e9a9ccccae98396cd',1,'setDecogging(void):&#160;PositionControl.c']]],
+  ['setmode',['setMODE',['../_utilities_8c.html#af4c5a7352334b805d0c36e3b495d0a16',1,'setMODE(mode newMODE):&#160;Utilities.c'],['../_utilities_8h.html#af4c5a7352334b805d0c36e3b495d0a16',1,'setMODE(mode newMODE):&#160;Utilities.c']]],
+  ['setn',['setN',['../_utilities_8c.html#acba07f8eaf5cdce3760657cfd53c35b8',1,'setN(void):&#160;Utilities.c'],['../_utilities_8h.html#acba07f8eaf5cdce3760657cfd53c35b8',1,'setN(void):&#160;Utilities.c']]],
+  ['setnclient',['setNclient',['../_utilities_8c.html#a28222caa228cb42e3dd503f611a431ff',1,'setNclient(int n):&#160;Utilities.c'],['../_utilities_8h.html#a28222caa228cb42e3dd503f611a431ff',1,'setNclient(int n):&#160;Utilities.c']]],
+  ['sysinit',['sysInit',['../r2r_8c.html#a9708de954e135b89af84d9d82b552667',1,'sysInit(void):&#160;r2r.c'],['../r2r_8h.html#a9708de954e135b89af84d9d82b552667',1,'sysInit(void):&#160;r2r.c']]]
 ];

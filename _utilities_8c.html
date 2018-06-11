@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>R2R: C:/Users/Ben/Documents/GitHub/2R-Robots/Code/Tiva/Utilities.h File Reference</title>
+<title>R2R: C:/Users/Ben/Documents/GitHub/2R-Robots/Code/Tiva/Utilities.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,147 +67,77 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Utilities.h File Reference</div>  </div>
+<div class="title">Utilities.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>utilities header  
+<p>The source code for utilities.  
 <a href="#details">More...</a></p>
-
-<p><a href="_utilities_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcontrol__data__t.html">control_data_t</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a8b0b0ebd19cb978bcd825b842558c31a"><td class="memItemLeft" align="right" valign="top"><a id="a8b0b0ebd19cb978bcd825b842558c31a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>DECIMATION</b>&#160;&#160;&#160;10</td></tr>
-<tr class="separator:a8b0b0ebd19cb978bcd825b842558c31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdeaf9c0da96c91dfdf573f977d32e6b"><td class="memItemLeft" align="right" valign="top"><a id="afdeaf9c0da96c91dfdf573f977d32e6b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>REFERENCE_DATA</b>&#160;&#160;&#160;10000</td></tr>
-<tr class="separator:afdeaf9c0da96c91dfdf573f977d32e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad974fe981249f5e84fbf1683b012c9f8"><td class="memItemLeft" align="right" valign="top"><a id="ad974fe981249f5e84fbf1683b012c9f8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BUFLEN</b>&#160;&#160;&#160;10000</td></tr>
-<tr class="separator:ad974fe981249f5e84fbf1683b012c9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a1a6b6fb557d8d37d59700faf4e4c9167"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167">mode</a> { <br />
-&#160;&#160;<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167afd6a0e4343048b10646dd2976cc5ad18">IDLE</a>, 
-<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167aef99a276e1f3b62b5df98acc27b38028">PWM</a>, 
-<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167a9cfa27b414cab750fb14ec07cdf5cf6a">HOLD</a>, 
-<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167a203efac3b32c320b1246bf5583be1e8c">TRACK</a>, 
-<br />
-&#160;&#160;<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167a27fee0e27984ddb3c58222eb66845638">ITRACK</a>, 
-<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167a18d908a31c7f4dae0cc52cb341397774">ITEST</a>, 
-<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167ade6b03ca96c31fab16e940f4b108019d">ISENSE</a>, 
-<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167a8fa069d3704d0835650e8b3b79994889">ICALIB</a>
-<br />
- }</td></tr>
-<tr class="separator:a1a6b6fb557d8d37d59700faf4e4c9167"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<div class="textblock"><code>#include &quot;<a class="el" href="r2r_8h_source.html">r2r.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_utilities_8h_source.html">Utilities.h</a>&quot;</code><br />
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a28222caa228cb42e3dd503f611a431ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a28222caa228cb42e3dd503f611a431ff">setNclient</a> (int n)</td></tr>
-<tr class="memdesc:a28222caa228cb42e3dd503f611a431ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recieve number of values to store in position data arrays from client.  <a href="#a28222caa228cb42e3dd503f611a431ff">More...</a><br /></td></tr>
-<tr class="separator:a28222caa228cb42e3dd503f611a431ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88ade88617e9bae6f82653ec6d6470a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a88ade88617e9bae6f82653ec6d6470a1">boundInt</a> (int a, int n)</td></tr>
-<tr class="memdesc:a88ade88617e9bae6f82653ec6d6470a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounds a given input to a range of values.  <a href="#a88ade88617e9bae6f82653ec6d6470a1">More...</a><br /></td></tr>
-<tr class="separator:a88ade88617e9bae6f82653ec6d6470a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acec61ed867597bb5d25a00b0e33d4476"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#acec61ed867597bb5d25a00b0e33d4476">maxInt</a> (int a, int b)</td></tr>
-<tr class="memdesc:acec61ed867597bb5d25a00b0e33d4476"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the large value of the two  <a href="#acec61ed867597bb5d25a00b0e33d4476">More...</a><br /></td></tr>
-<tr class="separator:acec61ed867597bb5d25a00b0e33d4476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19e5b0661a8f7acb8c2a975a4c84c0aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167">mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a19e5b0661a8f7acb8c2a975a4c84c0aa">getMODE</a> ()</td></tr>
-<tr class="memdesc:a19e5b0661a8f7acb8c2a975a4c84c0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Mode of the robot.  <a href="#a19e5b0661a8f7acb8c2a975a4c84c0aa">More...</a><br /></td></tr>
-<tr class="separator:a19e5b0661a8f7acb8c2a975a4c84c0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4c5a7352334b805d0c36e3b495d0a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#af4c5a7352334b805d0c36e3b495d0a16">setMODE</a> (<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167">mode</a> newMODE)</td></tr>
+<tr class="memitem:af4c5a7352334b805d0c36e3b495d0a16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#af4c5a7352334b805d0c36e3b495d0a16">setMODE</a> (<a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167">mode</a> newMODE)</td></tr>
 <tr class="memdesc:af4c5a7352334b805d0c36e3b495d0a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the Mode of the robot.  <a href="#af4c5a7352334b805d0c36e3b495d0a16">More...</a><br /></td></tr>
 <tr class="separator:af4c5a7352334b805d0c36e3b495d0a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acba07f8eaf5cdce3760657cfd53c35b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#acba07f8eaf5cdce3760657cfd53c35b8">setN</a> (void)</td></tr>
+<tr class="memitem:a19e5b0661a8f7acb8c2a975a4c84c0aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167">mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#a19e5b0661a8f7acb8c2a975a4c84c0aa">getMODE</a> ()</td></tr>
+<tr class="memdesc:a19e5b0661a8f7acb8c2a975a4c84c0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the Mode of the robot.  <a href="#a19e5b0661a8f7acb8c2a975a4c84c0aa">More...</a><br /></td></tr>
+<tr class="separator:a19e5b0661a8f7acb8c2a975a4c84c0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba07f8eaf5cdce3760657cfd53c35b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#acba07f8eaf5cdce3760657cfd53c35b8">setN</a> (void)</td></tr>
 <tr class="memdesc:acba07f8eaf5cdce3760657cfd53c35b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive number N of samples to save into data buffer.  <a href="#acba07f8eaf5cdce3760657cfd53c35b8">More...</a><br /></td></tr>
 <tr class="separator:acba07f8eaf5cdce3760657cfd53c35b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad100531ac5483b0915dc7ebf2e6f3a3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#ad100531ac5483b0915dc7ebf2e6f3a3d">getN</a> (void)</td></tr>
+<tr class="memitem:a28222caa228cb42e3dd503f611a431ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#a28222caa228cb42e3dd503f611a431ff">setNclient</a> (int n)</td></tr>
+<tr class="memdesc:a28222caa228cb42e3dd503f611a431ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recieve number of values to store in position data arrays from client.  <a href="#a28222caa228cb42e3dd503f611a431ff">More...</a><br /></td></tr>
+<tr class="separator:a28222caa228cb42e3dd503f611a431ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad100531ac5483b0915dc7ebf2e6f3a3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#ad100531ac5483b0915dc7ebf2e6f3a3d">getN</a> (void)</td></tr>
 <tr class="memdesc:ad100531ac5483b0915dc7ebf2e6f3a3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of samples.  <a href="#ad100531ac5483b0915dc7ebf2e6f3a3d">More...</a><br /></td></tr>
 <tr class="separator:ad100531ac5483b0915dc7ebf2e6f3a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa16427d2f35904a0b015876ac52406c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#aa16427d2f35904a0b015876ac52406c4">write_refPos</a> (int position, int index, int motor)</td></tr>
+<tr class="memitem:aa16427d2f35904a0b015876ac52406c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#aa16427d2f35904a0b015876ac52406c4">write_refPos</a> (int position, int index, int motor)</td></tr>
 <tr class="memdesc:aa16427d2f35904a0b015876ac52406c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the reference position.  <a href="#aa16427d2f35904a0b015876ac52406c4">More...</a><br /></td></tr>
 <tr class="separator:aa16427d2f35904a0b015876ac52406c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95d42f6612b70ed6839a907ccbee29e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a95d42f6612b70ed6839a907ccbee29e8">get_refPos</a> (int index, int motor)</td></tr>
+<tr class="memitem:a95d42f6612b70ed6839a907ccbee29e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#a95d42f6612b70ed6839a907ccbee29e8">get_refPos</a> (int index, int motor)</td></tr>
 <tr class="memdesc:a95d42f6612b70ed6839a907ccbee29e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the reference position.  <a href="#a95d42f6612b70ed6839a907ccbee29e8">More...</a><br /></td></tr>
 <tr class="separator:a95d42f6612b70ed6839a907ccbee29e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ee932fa1bdc8820ae0479fa64cf1e01"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a7ee932fa1bdc8820ae0479fa64cf1e01">buffer_empty</a> (void)</td></tr>
-<tr class="memdesc:a7ee932fa1bdc8820ae0479fa64cf1e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the buffer is empty.  <a href="#a7ee932fa1bdc8820ae0479fa64cf1e01">More...</a><br /></td></tr>
-<tr class="separator:a7ee932fa1bdc8820ae0479fa64cf1e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab06f20d652c9a1f51223495940f71ff0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#ab06f20d652c9a1f51223495940f71ff0">buffer_full</a> (void)</td></tr>
-<tr class="memdesc:ab06f20d652c9a1f51223495940f71ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the buffer is full.  <a href="#ab06f20d652c9a1f51223495940f71ff0">More...</a><br /></td></tr>
-<tr class="separator:ab06f20d652c9a1f51223495940f71ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c8c25ea6e552a6e3bd8c550bf8f4732"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a8c8c25ea6e552a6e3bd8c550bf8f4732">buffer_read_position</a> (int motor)</td></tr>
+<tr class="memitem:add3b6ddfe2455ef3b350799c0bb1391a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#add3b6ddfe2455ef3b350799c0bb1391a">buffer_empty</a> ()</td></tr>
+<tr class="memdesc:add3b6ddfe2455ef3b350799c0bb1391a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the buffer is empty.  <a href="#add3b6ddfe2455ef3b350799c0bb1391a">More...</a><br /></td></tr>
+<tr class="separator:add3b6ddfe2455ef3b350799c0bb1391a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d3fecfd260112b4979ccab4aa21c53d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#a4d3fecfd260112b4979ccab4aa21c53d">buffer_full</a> ()</td></tr>
+<tr class="memdesc:a4d3fecfd260112b4979ccab4aa21c53d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the buffer is full.  <a href="#a4d3fecfd260112b4979ccab4aa21c53d">More...</a><br /></td></tr>
+<tr class="separator:a4d3fecfd260112b4979ccab4aa21c53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c8c25ea6e552a6e3bd8c550bf8f4732"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#a8c8c25ea6e552a6e3bd8c550bf8f4732">buffer_read_position</a> (int motor)</td></tr>
 <tr class="memdesc:a8c8c25ea6e552a6e3bd8c550bf8f4732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads position from the current buffer location.  <a href="#a8c8c25ea6e552a6e3bd8c550bf8f4732">More...</a><br /></td></tr>
 <tr class="separator:a8c8c25ea6e552a6e3bd8c550bf8f4732"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d145a44e951f2b6213830490bb45c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a96d145a44e951f2b6213830490bb45c5">buffer_read_u</a> (int motor)</td></tr>
+<tr class="memitem:a96d145a44e951f2b6213830490bb45c5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#a96d145a44e951f2b6213830490bb45c5">buffer_read_u</a> (int motor)</td></tr>
 <tr class="memdesc:a96d145a44e951f2b6213830490bb45c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads current value from current buffer location.  <a href="#a96d145a44e951f2b6213830490bb45c5">More...</a><br /></td></tr>
 <tr class="separator:a96d145a44e951f2b6213830490bb45c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20cbe188c42de1a2849be3745a2c9e40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a20cbe188c42de1a2849be3745a2c9e40">buffer_read_increment</a> (void)</td></tr>
-<tr class="memdesc:a20cbe188c42de1a2849be3745a2c9e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the buffer read index.  <a href="#a20cbe188c42de1a2849be3745a2c9e40">More...</a><br /></td></tr>
-<tr class="separator:a20cbe188c42de1a2849be3745a2c9e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0391465d79feefe5cce4385fe8385e6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#a0391465d79feefe5cce4385fe8385e6a">buffer_write</a> (int M1_actPos, int M2_actPos, int M1_u, int M2_u)</td></tr>
+<tr class="memitem:ab2a010861366a7ee08860c011e3c1b55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#ab2a010861366a7ee08860c011e3c1b55">buffer_read_increment</a> ()</td></tr>
+<tr class="memdesc:ab2a010861366a7ee08860c011e3c1b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the buffer read index.  <a href="#ab2a010861366a7ee08860c011e3c1b55">More...</a><br /></td></tr>
+<tr class="separator:ab2a010861366a7ee08860c011e3c1b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0391465d79feefe5cce4385fe8385e6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#a0391465d79feefe5cce4385fe8385e6a">buffer_write</a> (int M1_actPos, int M2_actPos, int M1_u, int M2_u)</td></tr>
 <tr class="memdesc:a0391465d79feefe5cce4385fe8385e6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to buffer.  <a href="#a0391465d79feefe5cce4385fe8385e6a">More...</a><br /></td></tr>
 <tr class="separator:a0391465d79feefe5cce4385fe8385e6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8061654c0af0c3c3fac9e63ed7eaed6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8h.html#aa8061654c0af0c3c3fac9e63ed7eaed6">send_data</a> (void)</td></tr>
+<tr class="memitem:aa8061654c0af0c3c3fac9e63ed7eaed6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#aa8061654c0af0c3c3fac9e63ed7eaed6">send_data</a> (void)</td></tr>
 <tr class="memdesc:aa8061654c0af0c3c3fac9e63ed7eaed6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to client when it becomes available.  <a href="#aa8061654c0af0c3c3fac9e63ed7eaed6">More...</a><br /></td></tr>
 <tr class="separator:aa8061654c0af0c3c3fac9e63ed7eaed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ade88617e9bae6f82653ec6d6470a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#a88ade88617e9bae6f82653ec6d6470a1">boundInt</a> (int a, int n)</td></tr>
+<tr class="memdesc:a88ade88617e9bae6f82653ec6d6470a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bounds a given input to a range of values.  <a href="#a88ade88617e9bae6f82653ec6d6470a1">More...</a><br /></td></tr>
+<tr class="separator:a88ade88617e9bae6f82653ec6d6470a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec61ed867597bb5d25a00b0e33d4476"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_utilities_8c.html#acec61ed867597bb5d25a00b0e33d4476">maxInt</a> (int a, int b)</td></tr>
+<tr class="memdesc:acec61ed867597bb5d25a00b0e33d4476"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the large value of the two  <a href="#acec61ed867597bb5d25a00b0e33d4476">More...</a><br /></td></tr>
+<tr class="separator:acec61ed867597bb5d25a00b0e33d4476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>utilities header </p>
-<p>This file contains the communication buffer and mode functions</p>
+<div class="textblock"><p>The source code for utilities. </p>
+<p>This file contains the buffer and mode functions</p>
 <dl class="section author"><dt>Author</dt><dd>Benjamen Lim </dd>
 <dd>
 Huan Weng </dd>
 <dd>
 Blake Strebel </dd></dl>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a1a6b6fb557d8d37d59700faf4e4c9167"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a6b6fb557d8d37d59700faf4e4c9167">&#9670;&nbsp;</a></span>mode</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="_utilities_8h.html#a1a6b6fb557d8d37d59700faf4e4c9167">mode</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Data structure containing the modes of the system </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1a6b6fb557d8d37d59700faf4e4c9167afd6a0e4343048b10646dd2976cc5ad18"></a>IDLE&#160;</td><td class="fielddoc"><p>Sets motor effort to 0 </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1a6b6fb557d8d37d59700faf4e4c9167aef99a276e1f3b62b5df98acc27b38028"></a>PWM&#160;</td><td class="fielddoc"><p>PWM directly set by user </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1a6b6fb557d8d37d59700faf4e4c9167a9cfa27b414cab750fb14ec07cdf5cf6a"></a>HOLD&#160;</td><td class="fielddoc"><p>Sets motor effort to holding position </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1a6b6fb557d8d37d59700faf4e4c9167a203efac3b32c320b1246bf5583be1e8c"></a>TRACK&#160;</td><td class="fielddoc"><p>Sets motor effort to tracking mode </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1a6b6fb557d8d37d59700faf4e4c9167a27fee0e27984ddb3c58222eb66845638"></a>ITRACK&#160;</td><td class="fielddoc"><p>Track reference current </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1a6b6fb557d8d37d59700faf4e4c9167a18d908a31c7f4dae0cc52cb341397774"></a>ITEST&#160;</td><td class="fielddoc"><p>Test current control </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1a6b6fb557d8d37d59700faf4e4c9167ade6b03ca96c31fab16e940f4b108019d"></a>ISENSE&#160;</td><td class="fielddoc"><p>Read current for N samples </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a1a6b6fb557d8d37d59700faf4e4c9167a8fa069d3704d0835650e8b3b79994889"></a>ICALIB&#160;</td><td class="fielddoc"><p>Calibrate current sensing offsets </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a88ade88617e9bae6f82653ec6d6470a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88ade88617e9bae6f82653ec6d6470a1">&#9670;&nbsp;</a></span>boundInt()</h2>
 
@@ -246,8 +176,8 @@ Blake Strebel </dd></dl>
 
 </div>
 </div>
-<a id="a7ee932fa1bdc8820ae0479fa64cf1e01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ee932fa1bdc8820ae0479fa64cf1e01">&#9670;&nbsp;</a></span>buffer_empty()</h2>
+<a id="add3b6ddfe2455ef3b350799c0bb1391a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3b6ddfe2455ef3b350799c0bb1391a">&#9670;&nbsp;</a></span>buffer_empty()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,8 +204,8 @@ Blake Strebel </dd></dl>
 
 </div>
 </div>
-<a id="ab06f20d652c9a1f51223495940f71ff0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab06f20d652c9a1f51223495940f71ff0">&#9670;&nbsp;</a></span>buffer_full()</h2>
+<a id="a4d3fecfd260112b4979ccab4aa21c53d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3fecfd260112b4979ccab4aa21c53d">&#9670;&nbsp;</a></span>buffer_full()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,8 +232,8 @@ Blake Strebel </dd></dl>
 
 </div>
 </div>
-<a id="a20cbe188c42de1a2849be3745a2c9e40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20cbe188c42de1a2849be3745a2c9e40">&#9670;&nbsp;</a></span>buffer_read_increment()</h2>
+<a id="ab2a010861366a7ee08860c011e3c1b55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2a010861366a7ee08860c011e3c1b55">&#9670;&nbsp;</a></span>buffer_read_increment()</h2>
 
 <div class="memitem">
 <div class="memproto">
